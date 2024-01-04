@@ -49,28 +49,29 @@ export default function App() {
       }
     }
 
-    getToken();
-  }, [tokenFetched]);
+    // getToken();
+  }, []);
 
   // Render the App component only when the token is fetched
   return tokenFetched ? (
-    <AuthProvider>
-      <CitiesProvider jwtToken={jwtToken}>
-        <BrowserRouter>
-          <Routes>
-            {/* <Route path="/" element={<HomePage />} /> */}
-            <Route index element={<Homepage />} />
-            <Route path="product" element={<Product />} />
-            <Route path="pricing" element={<Pricing />} />
-            <Route path="/login" element={<Login />} />
-            <Route
-              path="app"
-              element={
-                <ProtectedRoute>
-                  <AppLayout />
-                </ProtectedRoute>
-              }
-            >
+    //<AuthProvider>
+      //<CitiesProvider jwtToken={jwtToken}>
+        //<BrowserRouter>
+          //<Routes>
+            //{/* <Route path="/" element={<HomePage />} /> */}
+            //<Route index element={<Homepage />} />
+            //<Route path="product" element={<Product />} />
+            //<Route path="pricing" element={<Pricing />} />
+            //<Route path="/login" element={<Login />} />
+            //<Route
+              //path="app"
+              //element={
+                //<ProtectedRoute>
+                  //<AppLayout />
+                //</ProtectedRoute>
+              //}
+            //>
+    <h1>HI</h1>
               <Route index element={<Navigate replace to="cities" />} />
 
               <Route path="cities" element={<CityList />} />
