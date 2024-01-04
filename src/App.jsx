@@ -53,7 +53,7 @@ export default function App() {
   }, []);
 
   // Render the App component only when the token is fetched
-  return tokenFetched ? (
+  return tokenFetched(
     //<AuthProvider>
       //<CitiesProvider jwtToken={jwtToken}>
         //<BrowserRouter>
@@ -72,17 +72,17 @@ export default function App() {
               //}
             //>
     <h1>HI</h1>
-              <Route index element={<Navigate replace to="cities" />} />
+              //<Route index element={<Navigate replace to="cities" />} />
 
-              <Route path="cities" element={<CityList />} />
-              <Route path="cities/:id" element={<City />} />
-              <Route path="countries" element={<CountryList />} />
-              <Route path="form" element={<Form />} />
-            </Route>
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </CitiesProvider>
-    </AuthProvider>
-  ) : null;
+              //<Route path="cities" element={<CityList />} />
+              //<Route path="cities/:id" element={<City />} />
+              //<Route path="countries" element={<CountryList />} />
+              //<Route path="form" element={<Form />} />
+            //</Route>
+            //<Route path="*" element={<PageNotFound />} />
+          //</Routes>
+        //</BrowserRouter>
+      //</CitiesProvider>
+    //</AuthProvider>
+  //) : null;
 }
